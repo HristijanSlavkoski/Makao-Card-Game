@@ -1,0 +1,2 @@
+C:\Users\Kiko\source\repos\Makao\Debug\Makao.exe
+C:\Users\Kiko\source\repos\Makao\Debug\Makao.pdb
