@@ -345,23 +345,13 @@ void promena(ListaIgrachi& igracista, Jazol** x)
     }
     cout << "Posle for ciklus" << endl;
     temp.pechati();
-    //igracista.brishiLista();					//TREBA DA JA BRISHE LISTATA
-    //igracista.init();							//AMA IZGLED ANE JA BRISHI
-    //igracista.dodadiPos(dvizi6->prev->igr);
-    //for(int i=0;i<3;i++)
-    //  {
-    //    igracista.dodadiPos(dvizi6->prev->igr);
-    //    dvizi6=dvizi6->prev;
-    //  }
-    //igracista.pechati();
     igracista = temp;
-    //  igracista.pechati();
     *x = igracista.head;
 }
 
 void reshuffle(shpil& deck, Karta* frleniKarti, int& k)
 {
-    cout << "RESHUFLEEEEE" << endl;
+    cout << "RESHUFLE" << endl;
     deck.broj = k - 1;
     cout << "BROJ NA KARTI SEGA VO DECK" << endl;
     cout << deck.getbroj();
@@ -472,8 +462,8 @@ int main()
 {
     srand(time(NULL));
     cout << "GOOD LUCK WITH YOUR MAKAO GAME" << endl;
-    ListaIgrachi igracista;
-    igracista.init();
+    ListaIgrachi igraciLista;
+    igraciLista.init();
     Igrach players[4];
     shpil deck = shpil();
     for (int i = 0; i < 4; i++)
@@ -490,15 +480,15 @@ int main()
         Igrach temp(ime, 7, karticinja);
         players[i] = temp;
     }
-    igracista.dodadiPos(players[0]);
-    igracista.dodadiPos(players[1]);
-    igracista.dodadiPos(players[2]);
-    igracista.dodadiPos(players[3]);
+    igraciLista.dodadiPos(players[0]);
+    igraciLista.dodadiPos(players[1]);
+    igraciLista.dodadiPos(players[2]);
+    igraciLista.dodadiPos(players[3]);
     //  igracista.pechati();
-    string pobednik = Game(igracista, deck);
+    string pobednik = Game(igraciLista, deck);
     cout << "POBEDNIK E: " << pobednik << endl;
 
-    igracista.brishiLista();
+    igraciLista.brishiLista();
     return 0;
 }
 
